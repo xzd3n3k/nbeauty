@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Lato } from "next/font/google";
+import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -9,7 +9,7 @@ const cormorant = Cormorant_Garamond({
   style: ["normal", "italic"],
 });
 
-const lato = Lato({
+const inter = Inter({
   variable: "--font-lato",
   subsets: ["latin", "latin-ext"],
   weight: ["300", "400", "700"],
@@ -45,7 +45,7 @@ export default function RootLayout({
   return (
     <html
       lang="cs"
-      className={`${cormorant.variable} ${lato.variable}`}
+      className={`${cormorant.variable} ${inter.variable}`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
