@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { serviceCategories } from "@/data/services";
 import { Clock } from "lucide-react";
@@ -8,7 +8,20 @@ import { Clock } from "lucide-react";
 export default function Services() {
   const [activeTab, setActiveTab] = useState(serviceCategories[0].id);
   const ref = useRef<HTMLDivElement>(null);
+  const tabsRef = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
+
+  useEffect(() => {
+    const el = tabsRef.current;
+    if (!el) return;
+    const onWheel = (e: WheelEvent) => {
+      if (e.deltaY === 0) return;
+      e.preventDefault();
+      el.scrollLeft += e.deltaY;
+    };
+    el.addEventListener("wheel", onWheel, { passive: false });
+    return () => el.removeEventListener("wheel", onWheel);
+  }, []);
 
   const activeCategory = serviceCategories.find((c) => c.id === activeTab)!;
 
@@ -36,28 +49,31 @@ export default function Services() {
           </div>
         </motion.div>
 
-        {/* Category tabs — scrollable on mobile */}
+        {/* Category tabs — scrollable, mouse-wheel enabled */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex gap-2 overflow-x-auto pb-4 mb-12 scrollbar-hide justify-start lg:justify-center"
+          ref={tabsRef}
+          className="overflow-x-auto pb-4 mb-12"
           style={{ scrollbarWidth: "none" }}
         >
-          {serviceCategories.map((cat) => (
-            <button
-              key={cat.id}
-              onClick={() => setActiveTab(cat.id)}
-              className={`flex-shrink-0 px-5 py-2.5 font-body text-xs tracking-widest uppercase transition-all duration-300 border whitespace-nowrap ${
-                activeTab === cat.id
-                  ? "border-gold-400 bg-gold-400 text-white"
-                  : "border-beige-200 text-stone-600 hover:border-gold-400 hover:text-gold-500 bg-white"
-              }`}
-            >
-              <span className="mr-1.5">{cat.icon}</span>
-              {cat.label}
-            </button>
-          ))}
+          <div className="flex gap-2 w-fit mx-auto px-1 py-1">
+            {serviceCategories.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => setActiveTab(cat.id)}
+                className={`flex-shrink-0 px-5 py-2.5 font-body text-xs tracking-widest uppercase transition-all duration-300 border whitespace-nowrap ${
+                  activeTab === cat.id
+                    ? "border-gold-400 bg-gold-400 text-white"
+                    : "border-beige-200 text-stone-600 hover:border-gold-400 hover:text-gold-500 bg-white"
+                }`}
+              >
+                <span className="mr-1.5">{cat.icon}</span>
+                {cat.label}
+              </button>
+            ))}
+          </div>
         </motion.div>
 
         {/* Services grid */}
