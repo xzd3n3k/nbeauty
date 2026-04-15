@@ -5,7 +5,7 @@ import { motion, useInView } from "framer-motion";
 import { Star, Award, Heart, Sparkles } from "lucide-react";
 
 const stats = [
-  { icon: Star, value: "4,92", label: "Hodnocení zákazníků" },
+  { icon: Star, value: "5,0", label: "Hodnocení zákazníků" },
   { icon: Sparkles, value: "55+", label: "Různých služeb" },
   { icon: Award, value: "9", label: "Kategorií péče" },
   { icon: Heart, value: "100%", label: "Spokojenost" },
