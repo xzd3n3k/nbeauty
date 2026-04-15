@@ -2,12 +2,12 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { MapPin, Clock, Phone, Instagram, ShoppingBag, CalendarCheck } from "lucide-react";
+import { MapPin, Clock, Phone, Mail, Instagram, Facebook, ShoppingBag, CalendarCheck } from "lucide-react";
 
 const openingHours = [
-  { day: "Pondělí – Pátek", hours: "10:00 – 20:00" },
-  { day: "Sobota", hours: "9:00 – 18:00" },
-  { day: "Neděle", hours: "10:00 – 17:00" },
+  { day: "Pondělí – Pátek", hours: "9:00 – 19:00" },
+  { day: "Sobota", hours: "10:00 – 19:00" },
+  { day: "Neděle", hours: "Zavřeno" },
 ];
 
 export default function Contact() {
@@ -73,6 +73,37 @@ export default function Contact() {
             >
               Zobrazit na mapě →
             </a>
+
+            <div className="mt-6 space-y-3 border-t border-beige-200 pt-5">
+              <a
+                href="tel:+420725876998"
+                className="flex items-center gap-3 group"
+              >
+                <div
+                  className="w-8 h-8 flex-shrink-0 flex items-center justify-center transition-all duration-300 group-hover:scale-110"
+                  style={{ background: "linear-gradient(135deg, #c09030, #d4a843)" }}
+                >
+                  <Phone size={14} strokeWidth={1.5} color="white" />
+                </div>
+                <span className="font-body text-sm text-stone-600 group-hover:text-gold-500 transition-colors">
+                  +420 725 876 998
+                </span>
+              </a>
+              <a
+                href="mailto:nbeautyrozkvet@email.cz"
+                className="flex items-center gap-3 group"
+              >
+                <div
+                  className="w-8 h-8 flex-shrink-0 flex items-center justify-center transition-all duration-300 group-hover:scale-110"
+                  style={{ background: "linear-gradient(135deg, #c09030, #d4a843)" }}
+                >
+                  <Mail size={14} strokeWidth={1.5} color="white" />
+                </div>
+                <span className="font-body text-sm text-stone-600 group-hover:text-gold-500 transition-colors">
+                  nbeautyrozkvet@email.cz
+                </span>
+              </a>
+            </div>
           </motion.div>
 
           {/* Opening hours */}
@@ -156,6 +187,26 @@ export default function Contact() {
                     Instagram
                   </div>
                   <div className="font-body text-xs text-stone-400">@nbeautycare.brno</div>
+                </div>
+              </a>
+
+              <a
+                href="https://www.facebook.com/nbeautycarebrno"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 group"
+              >
+                <div
+                  className="w-9 h-9 flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:scale-110"
+                  style={{ background: "linear-gradient(135deg, #c09030, #d4a843)" }}
+                >
+                  <Facebook size={16} strokeWidth={1.5} color="white" />
+                </div>
+                <div>
+                  <div className="font-body text-sm text-stone-800 group-hover:text-gold-500 transition-colors">
+                    Facebook
+                  </div>
+                  <div className="font-body text-xs text-stone-400">nbeautycarebrno</div>
                 </div>
               </a>
 

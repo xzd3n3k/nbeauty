@@ -1,4 +1,4 @@
-import { Instagram, CalendarCheck } from "lucide-react";
+import { Instagram, Facebook, CalendarCheck } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -43,6 +43,15 @@ export default function Footer() {
               className="w-9 h-9 flex items-center justify-center border border-beige-200 text-stone-400 hover:border-gold-400 hover:text-gold-500 transition-all duration-300"
             >
               <Instagram size={16} strokeWidth={1.5} />
+            </a>
+            <a
+              href="https://www.facebook.com/nbeautycarebrno"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="w-9 h-9 flex items-center justify-center border border-beige-200 text-stone-400 hover:border-gold-400 hover:text-gold-500 transition-all duration-300"
+            >
+              <Facebook size={16} strokeWidth={1.5} />
             </a>
             <a
               href="https://nbeauty-care-oc-rozkvet.reservio.com"
