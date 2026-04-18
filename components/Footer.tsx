@@ -101,10 +101,20 @@ export default function Footer() {
         {/* Divider */}
         <div className="my-8 h-px" style={{ background: "linear-gradient(90deg, transparent, #d4a843, transparent)" }} />
 
-        {/* Copyright */}
-        <p className="text-center font-body text-xs text-stone-400 tracking-wide">
-          © {currentYear} Nbeauty Care Brno. Všechna práva vyhrazena.
-        </p>
+        {/* Copyright + credit */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-2">
+          <p className="font-body text-xs text-stone-400 tracking-wide">
+            © {currentYear} Nbeauty Care Brno. Všechna práva vyhrazena.
+          </p>
+          <a
+            href="https://zdenek-portfolio.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-body text-xs text-stone-300 tracking-wide hover:text-gold-400 transition-colors duration-300"
+          >
+            Návrh & vývoj — <span className="text-stone-400">zdenek.dev</span>
+          </a>
+        </div>
       </div>
     </footer>
   );
