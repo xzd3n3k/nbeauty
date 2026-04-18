@@ -106,7 +106,7 @@ export default function Footer() {
             © {currentYear} Nbeauty Care Brno. Všechna práva vyhrazena.
           </p>
           <a
-            href="https://zdenek-portfolio.vercel.app"
+            href="https://zdenek-dev.cz"
             target="_blank"
             rel="noopener noreferrer"
             className="font-body text-xs text-stone-300 tracking-wide hover:text-gold-400 transition-colors duration-300"
