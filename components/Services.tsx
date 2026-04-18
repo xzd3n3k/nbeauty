@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { serviceCategories } from "@/data/services";
 import { Clock } from "lucide-react";
+import BookingButton from "./BookingButton";
 
 export default function Services() {
   const [activeTab, setActiveTab] = useState(serviceCategories[0].id);
@@ -146,18 +147,15 @@ export default function Services() {
           <p className="font-body text-stone-500 mb-6 text-sm tracking-wide">
             Nezávazná rezervace online — rychle a jednoduše
           </p>
-          <a
-            href="https://nbeauty-care-oc-rozkvet.reservio.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-12 py-4 font-body text-sm tracking-widest uppercase text-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
+          <BookingButton
+            className="px-12 py-4 font-body text-sm tracking-widest uppercase text-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
             style={{
               background: "linear-gradient(135deg, #c09030, #d4a843)",
               letterSpacing: "0.2em",
             }}
           >
             Rezervovat termín
-          </a>
+          </BookingButton>
         </motion.div>
       </div>
     </section>

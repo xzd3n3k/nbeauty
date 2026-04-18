@@ -67,14 +67,16 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Slevomat"
-              className="w-9 h-9 flex items-center justify-center border border-beige-200 bg-white overflow-hidden hover:border-gold-400 transition-all duration-300"
+              className="w-9 h-9 flex items-center justify-center hover:opacity-75 transition-all duration-300"
+              style={{ background: "linear-gradient(135deg, #c09030, #d4a843)" }}
             >
               <img
                 src="/logos/slevomat.svg"
                 alt="Slevomat"
-                width={22}
-                height={22}
+                width={20}
+                height={20}
                 className="object-contain"
+                style={{ filter: "brightness(0) invert(1)" }}
               />
             </a>
             <a
@@ -82,13 +84,14 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Notino"
-              className="w-9 h-9 flex items-center justify-center border border-beige-200 bg-white overflow-hidden hover:border-gold-400 transition-all duration-300"
+              className="w-9 h-9 flex items-center justify-center hover:opacity-75 transition-all duration-300"
+              style={{ background: "linear-gradient(135deg, #c09030, #d4a843)" }}
             >
               <img
                 src="/logos/notino.svg"
                 alt="Notino"
-                width={22}
-                height={22}
+                width={20}
+                height={20}
                 className="object-contain"
               />
             </a>

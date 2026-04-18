@@ -12,7 +12,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-[60] flex items-center justify-center">
+        <div className="fixed inset-0 z-[200] flex items-center justify-center">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -80,7 +80,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                 onClick={onClose}
                 className="flex-1 flex flex-col items-center gap-3 py-6 px-4 border border-beige-200 hover:border-gold-400 hover:shadow-sm transition-all duration-300 group"
               >
-                <div className="w-14 h-14 flex items-center justify-center bg-beige-50 rounded-full overflow-hidden border border-beige-100">
+                <div className="w-14 h-14 flex items-center justify-center rounded-full overflow-hidden" style={{ background: "#d4007f" }}>
                   <img
                     src="/logos/notino.svg"
                     alt="Notino"

@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import BookingModal from "./BookingModal";
+import { useBooking } from "./BookingProvider";
 
 interface BookingButtonProps {
   className?: string;
@@ -16,19 +15,16 @@ export default function BookingButton({
   children = "Rezervovat online",
   onBeforeOpen,
 }: BookingButtonProps) {
-  const [open, setOpen] = useState(false);
+  const { open } = useBooking();
 
   const handleClick = () => {
     onBeforeOpen?.();
-    setOpen(true);
+    open();
   };
 
   return (
-    <>
-      <button onClick={handleClick} className={className} style={style}>
-        {children}
-      </button>
-      <BookingModal isOpen={open} onClose={() => setOpen(false)} />
-    </>
+    <button onClick={handleClick} className={className} style={style}>
+      {children}
+    </button>
   );
 }

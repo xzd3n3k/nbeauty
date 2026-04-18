@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Star, Award, Heart, Sparkles } from "lucide-react";
+import { useBooking } from "./BookingProvider";
 
 const stats = [
   { icon: Star, value: "5,0", label: "Hodnocení zákazníků" },
@@ -14,6 +15,7 @@ const stats = [
 export default function About() {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
+  const { open } = useBooking();
 
   return (
     <section id="o-nas" className="py-28 bg-beige-50" ref={ref}>
@@ -59,15 +61,13 @@ export default function About() {
               </p>
             </div>
 
-            <motion.a
-              href="https://nbeauty-care-oc-rozkvet.reservio.com"
-              target="_blank"
-              rel="noopener noreferrer"
+            <motion.button
+              onClick={open}
               whileHover={{ scale: 1.03 }}
-              className="inline-block mt-10 px-8 py-3.5 border border-gold-400 text-gold-500 font-body text-xs tracking-widest uppercase hover:bg-gold-400 hover:text-white transition-all duration-300"
+              className="mt-10 px-8 py-3.5 border border-gold-400 text-gold-500 font-body text-xs tracking-widest uppercase hover:bg-gold-400 hover:text-white transition-all duration-300"
             >
               Rezervovat návštěvu
-            </motion.a>
+            </motion.button>
           </motion.div>
 
           {/* Right — Stats */}
