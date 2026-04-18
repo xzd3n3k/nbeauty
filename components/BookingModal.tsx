@@ -60,7 +60,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
               >
                 <div className="w-14 h-14 flex items-center justify-center bg-beige-50 rounded-full overflow-hidden border border-beige-100">
                   <img
-                    src="https://logo.clearbit.com/reservio.com"
+                    src="/logos/reservio.svg"
                     alt="Reservio"
                     width={36}
                     height={36}
@@ -82,7 +82,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
               >
                 <div className="w-14 h-14 flex items-center justify-center bg-beige-50 rounded-full overflow-hidden border border-beige-100">
                   <img
-                    src="https://logo.clearbit.com/notino.cz"
+                    src="/logos/notino.svg"
                     alt="Notino"
                     width={36}
                     height={36}

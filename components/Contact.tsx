@@ -218,7 +218,7 @@ export default function Contact() {
               >
                 <div className="w-9 h-9 flex items-center justify-center flex-shrink-0 bg-white border border-beige-200 overflow-hidden transition-all duration-300 group-hover:scale-110 group-hover:border-gold-300">
                   <img
-                    src="https://logo.clearbit.com/slevomat.cz"
+                    src="/logos/slevomat.svg"
                     alt="Slevomat"
                     width={28}
                     height={28}
@@ -242,7 +242,7 @@ export default function Contact() {
               >
                 <div className="w-9 h-9 flex items-center justify-center flex-shrink-0 bg-white border border-beige-200 overflow-hidden transition-all duration-300 group-hover:scale-110 group-hover:border-gold-300">
                   <img
-                    src="https://logo.clearbit.com/notino.cz"
+                    src="/logos/notino.svg"
                     alt="Notino"
                     width={28}
                     height={28}

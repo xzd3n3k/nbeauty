@@ -70,7 +70,7 @@ export default function Footer() {
               className="w-9 h-9 flex items-center justify-center border border-beige-200 bg-white overflow-hidden hover:border-gold-400 transition-all duration-300"
             >
               <img
-                src="https://logo.clearbit.com/slevomat.cz"
+                src="/logos/slevomat.svg"
                 alt="Slevomat"
                 width={22}
                 height={22}
@@ -85,7 +85,7 @@ export default function Footer() {
               className="w-9 h-9 flex items-center justify-center border border-beige-200 bg-white overflow-hidden hover:border-gold-400 transition-all duration-300"
             >
               <img
-                src="https://logo.clearbit.com/notino.cz"
+                src="/logos/notino.svg"
                 alt="Notino"
                 width={22}
                 height={22}
