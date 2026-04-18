@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import BookingButton from "./BookingButton";
 
 export default function Hero() {
   const scrollToServices = () => {
@@ -128,10 +129,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1.1 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
-          <a
-            href="https://nbeauty-care-oc-rozkvet.reservio.com"
-            target="_blank"
-            rel="noopener noreferrer"
+          <BookingButton
             className="px-10 py-4 font-body text-sm tracking-widest uppercase transition-all duration-300 hover:scale-105"
             style={{
               background: "linear-gradient(135deg, #c09030, #d4a843)",
@@ -140,7 +138,7 @@ export default function Hero() {
             }}
           >
             Rezervovat online
-          </a>
+          </BookingButton>
           <button
             onClick={scrollToServices}
             className="px-10 py-4 border border-white/40 text-white font-body text-sm tracking-widest uppercase hover:border-gold-400 hover:text-gold-400 transition-all duration-300"

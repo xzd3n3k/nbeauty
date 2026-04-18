@@ -1,4 +1,4 @@
-import { Instagram, Facebook, CalendarCheck, Tag, Sparkles } from "lucide-react";
+import { Instagram, Facebook, CalendarCheck } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -67,18 +67,32 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Slevomat"
-              className="w-9 h-9 flex items-center justify-center border border-beige-200 text-stone-400 hover:border-gold-400 hover:text-gold-500 transition-all duration-300"
+              className="w-9 h-9 flex items-center justify-center border border-beige-200 bg-white overflow-hidden hover:border-gold-400 transition-all duration-300"
             >
-              <Tag size={16} strokeWidth={1.5} />
+              <img
+                src="https://logo.clearbit.com/slevomat.cz"
+                alt="Slevomat"
+                width={22}
+                height={22}
+                className="object-contain"
+                onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+              />
             </a>
             <a
               href="https://www.notino.cz/salony/nbeauty-care/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Notino"
-              className="w-9 h-9 flex items-center justify-center border border-beige-200 text-stone-400 hover:border-gold-400 hover:text-gold-500 transition-all duration-300"
+              className="w-9 h-9 flex items-center justify-center border border-beige-200 bg-white overflow-hidden hover:border-gold-400 transition-all duration-300"
             >
-              <Sparkles size={16} strokeWidth={1.5} />
+              <img
+                src="https://logo.clearbit.com/notino.cz"
+                alt="Notino"
+                width={22}
+                height={22}
+                className="object-contain"
+                onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+              />
             </a>
           </div>
         </div>

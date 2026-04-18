@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import BookingButton from "./BookingButton";
 
 const navLinks = [
   { href: "#sluzby", label: "Služby" },
@@ -74,14 +75,9 @@ export default function Navbar() {
                 {link.label}
               </button>
             ))}
-            <a
-              href="https://nbeauty-care-oc-rozkvet.reservio.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-2.5 border border-gold-400 text-gold-500 font-body text-sm tracking-widest uppercase hover:bg-gold-400 hover:text-white transition-all duration-300"
-            >
+            <BookingButton className="px-6 py-2.5 border border-gold-400 text-gold-500 font-body text-sm tracking-widest uppercase hover:bg-gold-400 hover:text-white transition-all duration-300">
               Rezervovat
-            </a>
+            </BookingButton>
           </nav>
 
           {/* Mobile menu button */}
@@ -134,15 +130,12 @@ export default function Navbar() {
               </button>
             ))}
 
-            <a
-              href="https://nbeauty-care-oc-rozkvet.reservio.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setMenuOpen(false)}
+            <BookingButton
+              onBeforeOpen={() => setMenuOpen(false)}
               className="mt-4 px-10 py-3 border border-gold-400 text-gold-500 font-body text-sm tracking-widest uppercase hover:bg-gold-400 hover:text-white transition-all duration-300"
             >
               Rezervovat online
-            </a>
+            </BookingButton>
           </motion.div>
         )}
       </AnimatePresence>

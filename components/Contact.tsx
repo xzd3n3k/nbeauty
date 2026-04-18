@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { MapPin, Clock, Phone, Mail, Instagram, Facebook, ShoppingBag, CalendarCheck, Tag, Sparkles } from "lucide-react";
+import { MapPin, Clock, Phone, Mail, Instagram, Facebook, ShoppingBag, CalendarCheck } from "lucide-react";
 
 const openingHours = [
   { day: "Pondělí – Pátek", hours: "9:00 – 19:00" },
@@ -216,11 +216,15 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 group"
               >
-                <div
-                  className="w-9 h-9 flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:scale-110"
-                  style={{ background: "linear-gradient(135deg, #c09030, #d4a843)" }}
-                >
-                  <Tag size={16} strokeWidth={1.5} color="white" />
+                <div className="w-9 h-9 flex items-center justify-center flex-shrink-0 bg-white border border-beige-200 overflow-hidden transition-all duration-300 group-hover:scale-110 group-hover:border-gold-300">
+                  <img
+                    src="https://logo.clearbit.com/slevomat.cz"
+                    alt="Slevomat"
+                    width={28}
+                    height={28}
+                    className="object-contain"
+                    onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+                  />
                 </div>
                 <div>
                   <div className="font-body text-sm text-stone-800 group-hover:text-gold-500 transition-colors">
@@ -236,11 +240,15 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 group"
               >
-                <div
-                  className="w-9 h-9 flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:scale-110"
-                  style={{ background: "linear-gradient(135deg, #c09030, #d4a843)" }}
-                >
-                  <Sparkles size={16} strokeWidth={1.5} color="white" />
+                <div className="w-9 h-9 flex items-center justify-center flex-shrink-0 bg-white border border-beige-200 overflow-hidden transition-all duration-300 group-hover:scale-110 group-hover:border-gold-300">
+                  <img
+                    src="https://logo.clearbit.com/notino.cz"
+                    alt="Notino"
+                    width={28}
+                    height={28}
+                    className="object-contain"
+                    onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+                  />
                 </div>
                 <div>
                   <div className="font-body text-sm text-stone-800 group-hover:text-gold-500 transition-colors">
