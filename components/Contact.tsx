@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { MapPin, Clock, Phone, Mail, Instagram, Facebook, ShoppingBag, CalendarCheck } from "lucide-react";
+import { MapPin, Clock, Phone, Mail, Instagram, Facebook, ShoppingBag, CalendarCheck, Tag, Sparkles } from "lucide-react";
 
 const openingHours = [
   { day: "Pondělí – Pátek", hours: "9:00 – 19:00" },
@@ -207,6 +207,46 @@ export default function Contact() {
                     Facebook
                   </div>
                   <div className="font-body text-xs text-stone-400">nbeautycarebrno</div>
+                </div>
+              </a>
+
+              <a
+                href="https://www.slevomat.cz/podnik/211194-nbeautycare"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 group"
+              >
+                <div
+                  className="w-9 h-9 flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:scale-110"
+                  style={{ background: "linear-gradient(135deg, #c09030, #d4a843)" }}
+                >
+                  <Tag size={16} strokeWidth={1.5} color="white" />
+                </div>
+                <div>
+                  <div className="font-body text-sm text-stone-800 group-hover:text-gold-500 transition-colors">
+                    Slevomat
+                  </div>
+                  <div className="font-body text-xs text-stone-400">slevomat.cz</div>
+                </div>
+              </a>
+
+              <a
+                href="https://www.notino.cz/salony/nbeauty-care/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 group"
+              >
+                <div
+                  className="w-9 h-9 flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:scale-110"
+                  style={{ background: "linear-gradient(135deg, #c09030, #d4a843)" }}
+                >
+                  <Sparkles size={16} strokeWidth={1.5} color="white" />
+                </div>
+                <div>
+                  <div className="font-body text-sm text-stone-800 group-hover:text-gold-500 transition-colors">
+                    Notino
+                  </div>
+                  <div className="font-body text-xs text-stone-400">notino.cz</div>
                 </div>
               </a>
 

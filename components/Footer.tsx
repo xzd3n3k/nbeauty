@@ -1,4 +1,4 @@
-import { Instagram, Facebook, CalendarCheck } from "lucide-react";
+import { Instagram, Facebook, CalendarCheck, Tag, Sparkles } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -61,6 +61,24 @@ export default function Footer() {
               className="w-9 h-9 flex items-center justify-center border border-beige-200 text-stone-400 hover:border-gold-400 hover:text-gold-500 transition-all duration-300"
             >
               <CalendarCheck size={16} strokeWidth={1.5} />
+            </a>
+            <a
+              href="https://www.slevomat.cz/podnik/211194-nbeautycare"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Slevomat"
+              className="w-9 h-9 flex items-center justify-center border border-beige-200 text-stone-400 hover:border-gold-400 hover:text-gold-500 transition-all duration-300"
+            >
+              <Tag size={16} strokeWidth={1.5} />
+            </a>
+            <a
+              href="https://www.notino.cz/salony/nbeauty-care/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Notino"
+              className="w-9 h-9 flex items-center justify-center border border-beige-200 text-stone-400 hover:border-gold-400 hover:text-gold-500 transition-all duration-300"
+            >
+              <Sparkles size={16} strokeWidth={1.5} />
             </a>
           </div>
         </div>
