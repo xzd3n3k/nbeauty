@@ -75,7 +75,6 @@ export default function Footer() {
                 width={22}
                 height={22}
                 className="object-contain"
-                onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
               />
             </a>
             <a
@@ -91,7 +90,6 @@ export default function Footer() {
                 width={22}
                 height={22}
                 className="object-contain"
-                onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
               />
             </a>
           </div>
